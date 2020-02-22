@@ -10,7 +10,7 @@ import java.util.Set;
  */
 public class Account  implements java.io.Serializable {
 
-
+    
      private int id;
      private Customer customer;
      private int accNumber;
