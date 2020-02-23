@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Pavel Samodurov ps07t447@gmail.com
  */
-@WebServlet(name = "CustomerServlet", urlPatterns = {"/Customer"})
+@WebServlet(name = "CustomerServlet", urlPatterns = {"/CustomerServlet"})
 public class CustomerServlet extends HttpServlet {
 
     @EJB
@@ -48,9 +48,9 @@ public class CustomerServlet extends HttpServlet {
             out.println("<body>");
             out.println("<h1>Servlet CustomerServlet at " + request.getContextPath() + "</h1>");
             List<Customer> customers = customerFacade.findAll();
-            out.println("<h1>Count of customers: " + customers.size() + "</h1>");
+            out.println("<h1>Count of customers: " + customerFacade.count() + "</h1>");
             for (Customer customer : customers) {
-                out.println("<h1>Count of customers: " + customer.toString() + "</h1>");
+                out.println("<h1>Customer: " + customer.toString() + "</h1>");
             }
 
             out.println("</body>");
