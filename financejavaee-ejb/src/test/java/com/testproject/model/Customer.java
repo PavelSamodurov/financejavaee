@@ -109,7 +109,7 @@ public class Customer implements Serializable {
 
     @Override
     public String toString() {
-        return "Customer{" + "id=" + id + ", name=" + name + ", address=" + address + '}';
+        return "com.testproject.facade.Customer[ id=" + id + " ]";
     }
-
+    
 }
