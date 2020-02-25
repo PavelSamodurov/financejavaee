@@ -1,7 +1,7 @@
 DELETE FROM fin_transaction;
 DELETE FROM account;
 DELETE FROM customer;
-ALTER SEQUENCE global_seq RESTART WITH 100000;
+ALTER SEQUENCE global_seq_finance RESTART WITH 100000;
 
 INSERT INTO customer (name, address) VALUES
   ('Customer1', 'address1'),
